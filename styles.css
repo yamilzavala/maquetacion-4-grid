@@ -6,7 +6,7 @@
     list-style: none;
 }
 
-
+/* inicio header */
 
 #container {
     width: 90%;
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: 120px;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+    border-bottom: solid 1px #ccc;
 }
 
 .logo {
@@ -70,10 +70,13 @@
    color: white;
 }
 
-/* test content */
+/* fin header */
+
+/* inicio content */
 #content {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.3%;
 }
 
 #aside {
@@ -158,7 +161,108 @@
 .project-info a:hover {
     color: green;
 }
+/* fin content */
 
+/*inicio footer */
+#footer {
+    display: flex;
+    height: auto;
+    flex-flow: row wrap;
+    border-top: solid 1px #ccc
+}
+
+#footer .logo{
+    order: 2;
+    flex-grow: 1;
+    opacity: .5;
+    font-style: italic;
+    font-weight: 700;
+    margin-right: 20%;
+    flex-basis: auto;
+    text-align: center;
+    
+}
+
+#footer .autor{
+    order: 1;
+    flex-grow: 1;
+    opacity: .8;
+    margin-top: 15px;  
+    margin-left: 11%; 
+}
+
+/*fin footer */
+
+/* media queries */
+@media (max-width: 1368px) {
+    #header {
+        text-align: center;        
+    }
+
+    #header .logo {
+        flex-basis: 10%;       
+    }
+
+    #navegacion > ul {         
+        justify-content: space-evenly;        
+    }
+}
+
+@media (max-width: 800px) {
+    
+    #navegacion > ul li a {         
+        font-size: 13px;
+        padding: 0px;    
+    }
+}
+@media (max-width: 600px) {
+
+    #header .logo {  
+        flex-basis: 100%; 
+    }
+
+    #navegacion > ul {     
+        margin-top: 2%;
+        align-items: flex-start;   
+        justify-content: space-evenly;        
+    }
+
+    #footer {
+       flex-direction: column;
+       align-items: center;
+    }
+
+    #footer .logo {
+        margin-right: 0px;
+    }
+
+    #footer .autor {   
+        margin-left: 0px; 
+    }
+}
+
+@media (max-width: 340px) {
+   
+    #header  {  
+        height: auto;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    #navegacion > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content {
+       flex-direction: column;
+    }
+    
+    #project {       
+       margin-right: 0px;
+    }
+
+}
 
 
 
